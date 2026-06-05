@@ -13,7 +13,11 @@ RUN git clone https://github.com/w3c/rdf-tests.git
 COPY *.pl ./
 ENTRYPOINT ["/usr/local/bin/perl"]
 
-# Run with:
+# Build:
+#
+#  % docker build -t sparql-test .
+#
+# and run with:
 #
 ### SPARQL Protocol
 #
