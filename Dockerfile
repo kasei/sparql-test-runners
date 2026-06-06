@@ -2,11 +2,6 @@ FROM perl:5.42.2
 
 WORKDIR /usr/src/attean
 
-RUN apt-get update; \
-    apt-get install -y liblmdb-dev \
-    ; \
-    apt-get dist-clean
-
 ARG NO_NETWORK_TESTING=1
 RUN cpanm --notest Attean
 RUN git clone https://github.com/w3c/rdf-tests.git
